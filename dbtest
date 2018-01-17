@@ -46,7 +46,7 @@ rake yarn:install                       # Install all JavaScript dependencies as
 
 
 
-rail g model off_id_user:integer off_type:binary off_description:text off_images off_tags:text off_karma:integer off_registrer_date:datetime off_deleted_at:datetime
+rail g model off_id_user:integer off_id_user_delete:integer off_type:binary off_description:text off_images off_tags:text off_karma:integer off_registrer_date:datetime off_deleted_at:datetime
 
 Offer.create(
 off_id_user:
@@ -57,6 +57,7 @@ off_tags:
 off_karma:
 )
 
+off_value:decimal
 
 Offer.create(
 off_id_user: 666,
@@ -64,7 +65,10 @@ off_type: 5,
 off_description: 'Vendo pão por uma hora',
 off_images: 'C:',
 off_tags: 'Pão,comida,carboidrato',
-off_karma: 8 )
+off_karma: 8,
+off_id_user_delete: 123,
+off_value:3.5,
+)
 
 
 Offer.create(
@@ -73,4 +77,16 @@ off_type: 1,
 off_description: 'compro batata',
 off_images: 'C:',
 off_tags: 'Batata, Carboidrato, Comida',
-off_karma: 25 )
+off_karma: 25,
+off_value:2)
+
+
+
+Offer.create(
+off_id_user: 555,
+off_type: 2,
+off_description: 'VENDO cachorro',
+off_images: 'C:',
+off_tags: 'Animal, companheiro',
+off_karma: 12,
+off_value:4)

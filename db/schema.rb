@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180111224614) do
+ActiveRecord::Schema.define(version: 20180116230734) do
 
   create_table "offers", force: :cascade do |t|
     t.integer "off_id_user"
@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 20180111224614) do
     t.datetime "off_deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "off_value"
+    t.integer "off_id_user_delete"
   end
 
 end
