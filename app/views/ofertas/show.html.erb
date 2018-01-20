@@ -1,0 +1,13 @@
+<html>
+<article>
+  <header>
+    <h1> <%= @oferta.off_description %> </h1>
+  </header>
+    <li><b>Usuario:</b> <%=@oferta.off_id_user%></b> </li>
+    <li><b>Tipo de oferta <%=offer_type(@oferta)%></b> </li>
+    <li><b>Descrição: <%=@oferta.off_description%></b> </li>
+    <li><b>Imagens: <%=@oferta.off_images%></b> </li>
+    <li><b>Karma <%=@oferta.off_karma%></b> </li>
+    <li><b>Valor: </b><%= formate_values(@oferta)%></li>
+</article>
+<h/tml>

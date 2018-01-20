@@ -4,4 +4,8 @@ class OfertasController < ApplicationController
     @ofertas = Offer.all
   end
 
+  def show
+    @oferta = Offer.find(params[:id])
+  end
+
 end
