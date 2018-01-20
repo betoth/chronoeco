@@ -1,10 +1,10 @@
-<h1>Ofertas</h1>
+o <h1>Ofertas</h1>
 
 <ul>
   <%@ofertas.each do |oferta|%>
+    <li><b><%=link_to truncate_text(oferta,15), oferta_path(oferta.id) %></b> </li>
     <li><b>Usuario:</b> <%=oferta.off_id_user%></b> </li>
     <li><b>Tipo de oferta <%=offer_type(oferta)%></b> </li>
-    <li><b>Descrição: <%=truncate_text(oferta,15)%></b> </li>
     <li><b>Imagens: <%=oferta.off_images%></b> </li>
     <li><b>Karma <%=oferta.off_karma%></b> </li>
     <li><b>Valor: </b><%= formate_values(oferta)%></li>
